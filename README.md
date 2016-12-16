@@ -13,7 +13,7 @@
 | AMapSearchAPI	| - (UIImage *)takeSnapshotInRect:(CGRect)rect; | 在指定区域内截图(默认会包含该区域内的annotationView) | v4.0.0 |
 
 ## 核心难点 ##
-
+- objective-c
 ```
 /*截图*/
 - (void)captureAction
@@ -41,4 +41,25 @@
     // show the image
     [self transitionToDetailWithImage:image];
 }
+```
+-swift
+```
+    func captureAction() {
+        // map image
+        let mapImage = self.mapView.takeSnapshot(in: self.mapView.bounds)
+        // result image
+        let s = self.resultView.bounds.size
+        UIGraphicsBeginImageContextWithOptions(s, false, UIScreen.main.scale)
+        self.resultView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let resultImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        // union image
+        let imageSize = self.mapView.bounds.size
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, UIScreen.main.scale)
+        mapImage?.draw(in: self.mapView.bounds)
+        resultImage.draw(in: self.resultView.frame)
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.transitionToDetail(with: image)
+    }
 ```
