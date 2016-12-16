@@ -42,7 +42,7 @@
     [self transitionToDetailWithImage:image];
 }
 ```
--swift
+- swift
 ```
     func captureAction() {
         // map image
