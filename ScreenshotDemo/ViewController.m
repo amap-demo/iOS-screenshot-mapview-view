@@ -47,7 +47,8 @@
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"截图" forState:UIControlStateNormal];
-    [button setBackgroundColor:[UIColor whiteColor]];
+    [button setBackgroundColor:[UIColor darkGrayColor]];
+    button.showsTouchWhenHighlighted = YES;
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     
     button.frame = CGRectMake(10, 80, 60, 40);

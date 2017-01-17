@@ -25,7 +25,18 @@
 		B66EF0F01E03A52F00236C3C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B66EF0EF1E03A52F00236C3C /* Podfile */; };
 		B66EF0F21E03A58000236C3C /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EF0F11E03A58000236C3C /* ResultView.swift */; };
 		D087C65950E492B759C0AC61 /* libPods-ScreenshotDemo-swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91589671473D852ADE29FB0D /* libPods-ScreenshotDemo-swift.a */; };
+		D99D74B21E2E2162000D48AE /* ScreenshotDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D99D74B11E2E2162000D48AE /* ScreenshotDemoUITests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D99D74B41E2E2162000D48AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81EE31B31DC9CCFC004D14D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81EE31BA1DC9CCFC004D14D4;
+			remoteInfo = ScreenshotDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		310A4D5A3766EFD13B4D22C8 /* Pods-ScreenshotDemo-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenshotDemo-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenshotDemo-swift/Pods-ScreenshotDemo-swift.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +70,9 @@
 		B66EF0ED1E03A49B00236C3C /* ScreenshotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotDetailViewController.swift; sourceTree = "<group>"; };
 		B66EF0EF1E03A52F00236C3C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		B66EF0F11E03A58000236C3C /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D99D74AF1E2E2162000D48AE /* ScreenshotDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenshotDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99D74B11E2E2162000D48AE /* ScreenshotDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenshotDemoUITests.m; sourceTree = "<group>"; };
+		D99D74B31E2E2162000D48AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +89,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D087C65950E492B759C0AC61 /* libPods-ScreenshotDemo-swift.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D99D74AC1E2E2162000D48AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +119,7 @@
 				B66EF0EF1E03A52F00236C3C /* Podfile */,
 				81EE31BD1DC9CCFC004D14D4 /* ScreenshotDemo */,
 				B66EF0D21E039D7F00236C3C /* ScreenshotDemo-swift */,
+				D99D74B01E2E2162000D48AE /* ScreenshotDemoUITests */,
 				81EE31BC1DC9CCFC004D14D4 /* Products */,
 				80453241ACCC9FDA32C4498B /* Pods */,
 				DEE44BCBA08373CA2CC3502D /* Frameworks */,
@@ -109,6 +131,7 @@
 			children = (
 				81EE31BB1DC9CCFC004D14D4 /* ScreenshotDemo.app */,
 				B66EF0D11E039D7E00236C3C /* ScreenshotDemo-swift.app */,
+				D99D74AF1E2E2162000D48AE /* ScreenshotDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +178,15 @@
 				B66EF0E31E039DFA00236C3C /* objcBridge.h */,
 			);
 			path = "ScreenshotDemo-swift";
+			sourceTree = "<group>";
+		};
+		D99D74B01E2E2162000D48AE /* ScreenshotDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D99D74B11E2E2162000D48AE /* ScreenshotDemoUITests.m */,
+				D99D74B31E2E2162000D48AE /* Info.plist */,
+			);
+			path = ScreenshotDemoUITests;
 			sourceTree = "<group>";
 		};
 		DEE44BCBA08373CA2CC3502D /* Frameworks */ = {
@@ -209,6 +241,24 @@
 			productReference = B66EF0D11E039D7E00236C3C /* ScreenshotDemo-swift.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D99D74AE1E2E2162000D48AE /* ScreenshotDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D99D74B81E2E2162000D48AE /* Build configuration list for PBXNativeTarget "ScreenshotDemoUITests" */;
+			buildPhases = (
+				D99D74AB1E2E2162000D48AE /* Sources */,
+				D99D74AC1E2E2162000D48AE /* Frameworks */,
+				D99D74AD1E2E2162000D48AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D99D74B51E2E2162000D48AE /* PBXTargetDependency */,
+			);
+			name = ScreenshotDemoUITests;
+			productName = ScreenshotDemoUITests;
+			productReference = D99D74AF1E2E2162000D48AE /* ScreenshotDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,6 +279,12 @@
 						DevelopmentTeam = YMJ372W38W;
 						ProvisioningStyle = Manual;
 					};
+					D99D74AE1E2E2162000D48AE = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = YMJ372W38W;
+						ProvisioningStyle = Manual;
+						TestTargetID = 81EE31BA1DC9CCFC004D14D4;
+					};
 				};
 			};
 			buildConfigurationList = 81EE31B61DC9CCFC004D14D4 /* Build configuration list for PBXProject "ScreenshotDemo" */;
@@ -246,6 +302,7 @@
 			targets = (
 				81EE31BA1DC9CCFC004D14D4 /* ScreenshotDemo */,
 				B66EF0D01E039D7E00236C3C /* ScreenshotDemo-swift */,
+				D99D74AE1E2E2162000D48AE /* ScreenshotDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,6 +326,13 @@
 				B66EF0DB1E039D7F00236C3C /* Assets.xcassets in Resources */,
 				B66EF0F01E03A52F00236C3C /* Podfile in Resources */,
 				B66EF0D91E039D7F00236C3C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D99D74AD1E2E2162000D48AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +455,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D99D74AB1E2E2162000D48AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99D74B21E2E2162000D48AE /* ScreenshotDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D99D74B51E2E2162000D48AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81EE31BA1DC9CCFC004D14D4 /* ScreenshotDemo */;
+			targetProxy = D99D74B41E2E2162000D48AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		81EE31C71DC9CCFC004D14D4 /* Main.storyboard */ = {
@@ -592,6 +672,38 @@
 			};
 			name = Release;
 		};
+		D99D74B61E2E2162000D48AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = ScreenshotDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.autonavi.ScreenshotDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8014ae4e-33b6-4937-87e3-3725a2aad4f7";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
+				TEST_TARGET_NAME = ScreenshotDemo;
+			};
+			name = Debug;
+		};
+		D99D74B71E2E2162000D48AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = ScreenshotDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.autonavi.ScreenshotDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8014ae4e-33b6-4937-87e3-3725a2aad4f7";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
+				TEST_TARGET_NAME = ScreenshotDemo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -621,6 +733,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D99D74B81E2E2162000D48AE /* Build configuration list for PBXNativeTarget "ScreenshotDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D99D74B61E2E2162000D48AE /* Debug */,
+				D99D74B71E2E2162000D48AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
