@@ -25,48 +25,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [self initMapView];
-    [self initResultView];
     
     [self initButton];
+    
+    [self initResultView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [self.mapView showOverlays:self.mapView.overlays edgePadding:UIEdgeInsetsMake(80, 30, 220, 30) animated:NO];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)initButton
-{
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"截图" forState:UIControlStateNormal];
-    [button setBackgroundColor:[UIColor darkGrayColor]];
-    button.showsTouchWhenHighlighted = YES;
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    
-    button.frame = CGRectMake(10, 80, 60, 40);
-    [button addTarget:self action:@selector(captureAction) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:button];
-}
-
-- (void)initMapView
-{
-    self.mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
-    self.mapView.delegate = self;
-    self.mapView.showsIndoorMap = NO;
-    self.mapView.showsCompass = NO;
-    self.mapView.showsScale = NO;
-    
-    [self.view addSubview:self.mapView];
-    
     
     // polyline
     int count = 30;
@@ -105,6 +72,38 @@
     MAMultiPolyline *multiPolyline = [MAMultiPolyline polylineWithCoordinates:polylineCoords count:count drawStyleIndexes:@[@10, @18, @24, @29]];
     [self.mapView addOverlay:multiPolyline];
     
+    [self.mapView showOverlays:self.mapView.overlays edgePadding:UIEdgeInsetsMake(80, 30, 220, 30) animated:NO];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)initButton
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"截图" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor darkGrayColor]];
+    button.showsTouchWhenHighlighted = YES;
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    
+    button.frame = CGRectMake(10, 80, 60, 40);
+    [button addTarget:self action:@selector(captureAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button];
+}
+
+- (void)initMapView
+{
+    self.mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
+    self.mapView.delegate = self;
+    self.mapView.showsIndoorMap = NO;
+    self.mapView.showsCompass = NO;
+    self.mapView.showsScale = NO;
+    
+    [self.view addSubview:self.mapView];
 }
 
 - (void)initResultView
@@ -117,7 +116,7 @@
     
     self.resultView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMaxY(self.view.bounds) - 100);
     
-    [self.mapView addSubview:self.resultView];
+    [self.view addSubview:self.resultView];
     
     self.resultView.distance = 3110;
     self.resultView.duration = 5*3600 + 32*60 + 8;
