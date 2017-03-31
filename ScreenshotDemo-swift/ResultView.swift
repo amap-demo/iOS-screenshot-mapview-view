@@ -32,7 +32,7 @@ class ResultView: UIView {
         //
         let subItemY: CGFloat = size.height / 2.0 + 10
         let subItemMargin: CGFloat = 20
-        let h = self.duration / 3600
+        let h = Int(self.duration) / 3600
         let m = (Int(self.duration) % 3600) / 60
         let s = (Int(self.duration) % 3600) % 60
         let duration = String(format: "%02d:%02d:%02d", h, m, s)
