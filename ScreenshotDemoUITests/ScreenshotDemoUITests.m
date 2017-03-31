@@ -34,14 +34,8 @@
 
 - (void)testExample {
     
-    
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    
     sleep(1);
-    
-    [[[[[app.otherElements containingType:XCUIElementTypeButton identifier:@"\u622a\u56fe"] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:1] pinchWithScale:3 velocity:5];
-    
-    sleep(3);
     
     [app.buttons[@"截图"] tap];
     
@@ -49,7 +43,7 @@
     
     [app.navigationBars[@"ScreenshotDetailView"].buttons[@"Done"] tap];
     
-    sleep(2);
+    sleep(1);
     
 }
 
