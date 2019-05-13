@@ -113,7 +113,7 @@ class ViewController: UIViewController, MAMapViewDelegate {
     }
     
     // MARK: - Handle Action
-    func captureAction() {
+    @objc func captureAction() {
         // map image
         let mapImage = self.mapView.takeSnapshot(in: self.mapView.bounds)
         // result image
@@ -137,7 +137,7 @@ class ViewController: UIViewController, MAMapViewDelegate {
         detailViewController.screenshotImage = image
         detailViewController.modalTransitionStyle = .flipHorizontal
         var navi = UINavigationController(rootViewController: detailViewController)
-        self.present(navi, animated: true, completion: { _ in })
+        self.present(navi, animated: true, completion: nil)
     }
 }
 

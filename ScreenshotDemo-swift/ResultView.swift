@@ -60,7 +60,7 @@ class ResultView: UIView {
         }
         let style = NSMutableParagraphStyle()
         style.alignment = .center
-        string.draw(in: inRect, withAttributes: [NSFontAttributeName: UIFont.systemFont(ofSize: fontSize), NSForegroundColorAttributeName: usedColor, NSParagraphStyleAttributeName: style])
+        string.draw(in: inRect, withAttributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize), NSAttributedStringKey.foregroundColor: usedColor, NSAttributedStringKey.paragraphStyle: style])
     }
 
 }

@@ -20,8 +20,8 @@ class ScreenshotDetailViewController: UIViewController {
         self.initImageView()
     }
     
-    func backAction() {
-        self.dismiss(animated: true, completion: { _ in })
+    @objc func backAction() {
+        self.dismiss(animated: true, completion:nil)
     }
     
     // MARK: - Initialization
